@@ -7,7 +7,6 @@ const puppeteer = require('puppeteer');
   await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0')
   // Navigate the page to a URL
   await page.goto('https://www.ratp.fr/infotrafic-render-ajax');
-  await page.waitForSelector('.trafic-network-lines');
   const pageSourceHTML = await page.content();
   await browser.close();
   console.log(pageSourceHTML);
